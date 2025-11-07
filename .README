@@ -3,8 +3,8 @@ Board: arduino UNO
 
 It detects simple colors and display the color it detects and the LED will show the color correspoding of the color it detetcts
 
-Component	             Pin on Module	 Connects To (Arduino Uno)	            Notes
-TCS34725 Color Sensor	    VIN	                    5 V	               Power supply for the sensor
+Component	             Pin on Module	 	Connects To (Arduino Uno)	      Notes
+TCS34725 Color Sensor	    VIN	                    5 V	               		Power supply for the sensor
 	                        GND                 	GND	                    Common ground
 	                        SDA	                    A4	                    I2C data line
 	                        SCL	                    A5	                    I2C clock line
