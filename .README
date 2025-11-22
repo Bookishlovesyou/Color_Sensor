@@ -17,5 +17,5 @@ I2C LCD (16x2)	            VCC	                    5 V	                    Power
 RGB LED (Common Cathode)	R (Red leg)	            D3 (PWM)	            Red control pin
 	                        G (Green leg)	        D5 (PWM)	            Green control pin
                             B (Blue leg)	        D6 (PWM)	            Blue control pin
-	                        Common (Cathode leg)	GND	                    Connect to ground
-Optional	                —	                    —	                    Add 220 Ω resistor in series with each R, G, and B leg to limit current
+	                        Common (Cathode leg)	GND(UNO)	            Connect to ground
+Optional	                —	                    —	                    Add 220 Ω resistor in series with each R, G, and B leg to limit current   
