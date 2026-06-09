@@ -3,8 +3,8 @@ Board: arduino UNO
 
 It detects simple colors and display the color it detects and the LED will show the color correspoding of the color it detetcts
 
-Component	             Pin on Module	 Connects To (Arduino Uno)	            Notes
-TCS34725 Color Sensor	    VIN	                    5 V	               Power supply for the sensor
+Component	             Pin on Module	 	Connects To (Arduino Uno)	      Notes
+TCS34725 Color Sensor	    VIN	                    5 V	               		Power supply for the sensor
 	                        GND                 	GND	                    Common ground
 	                        SDA	                    A4	                    I2C data line
 	                        SCL	                    A5	                    I2C clock line
@@ -17,5 +17,5 @@ I2C LCD (16x2)	            VCC	                    5 V	                    Power
 RGB LED (Common Cathode)	R (Red leg)	            D3 (PWM)	            Red control pin
 	                        G (Green leg)	        D5 (PWM)	            Green control pin
                             B (Blue leg)	        D6 (PWM)	            Blue control pin
-	                        Common (Cathode leg)	GND	                    Connect to ground
-Optional	                —	                    —	                    Add 220 Ω resistor in series with each R, G, and B leg to limit current
+	                        Common (Cathode leg)	GND(UNO)	            Connect to ground
+Optional	                —	                    —	                    Add 220 Ω resistor in series with each R, G, and B leg to limit current   
