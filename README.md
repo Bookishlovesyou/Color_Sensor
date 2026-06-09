@@ -1,21 +1,41 @@
-Project name: Color sensor
-Board: arduino UNO
+# Color Sensor
 
-It detects simple colors and display the color it detects and the LED will show the color correspoding of the color it detetcts
+A simple Arduino Uno project that uses a TCS34725 color sensor to detect colors. The detected color is displayed on a 16x2 I2C LCD, and an RGB LED lights up with the corresponding color.
 
-Component	             Pin on Module	 	Connects To (Arduino Uno)	      Notes
-TCS34725 Color Sensor	    VIN	                    5 V	               		Power supply for the sensor
-	                        GND                 	GND	                    Common ground
-	                        SDA	                    A4	                    I2C data line
-	                        SCL	                    A5	                    I2C clock line
-                            3v3                     3.3v                    For the brightness
-	                        LED	                    —	                    Leave connected internally (built-in LED for illumination)
-I2C LCD (16x2)	            VCC	                    5 V	                    Power supply for the LCD
-	                        GND	                    GND	                    Common ground
-	                        SDA	                    A4	                    I2C data line (shared with TCS34725)
-	                        SCL	                    A5	                    I2C clock line (shared with TCS34725)
-RGB LED (Common Cathode)	R (Red leg)	            D3 (PWM)	            Red control pin
-	                        G (Green leg)	        D5 (PWM)	            Green control pin
-                            B (Blue leg)	        D6 (PWM)	            Blue control pin
-	                        Common (Cathode leg)	GND(UNO)	            Connect to ground
-Optional	                —	                    —	                    Add 220 Ω resistor in series with each R, G, and B leg to limit current   
+## Components
+
+- Arduino Uno
+- TCS34725 Color Sensor
+- 16x2 I2C LCD
+- RGB LED (Common Cathode)
+- Jumper Wires
+- 220 Ω Resistors (Optional)
+
+## Wiring
+
+| Component | Pin | Arduino Uno |
+|------------|-----|-------------|
+| TCS34725 | VIN | 5V |
+| TCS34725 | GND | GND |
+| TCS34725 | SDA | A4 |
+| TCS34725 | SCL | A5 |
+| TCS34725 | 3V3 | 3.3V |
+| LCD I2C | VCC | 5V |
+| LCD I2C | GND | GND |
+| LCD I2C | SDA | A4 |
+| LCD I2C | SCL | A5 |
+| RGB LED (Red) | R | D3 |
+| RGB LED (Green) | G | D5 |
+| RGB LED (Blue) | B | D6 |
+| RGB LED (Cathode) | Common | GND |
+
+## Features
+
+- Detects basic colors
+- Displays detected color on LCD
+- RGB LED shows the detected color
+- Uses I2C communication for sensor and display
+
+## How It Works
+
+The TCS34725 reads the color of an object placed in front of the sensor. The Arduino processes the readings, displays the detected color on the LCD, and lights the RGB LED with the corresponding color.
